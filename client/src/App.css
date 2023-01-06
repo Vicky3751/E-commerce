@@ -1,0 +1,48 @@
+.full-height {
+    height: 100% !important;
+}
+
+.full-width {
+    width: 100% !important;
+}
+
+.invisible {
+    display: none !important;
+}
+
+.btn-primary {
+    color: #fff !important;
+    background-color: black !important;
+    border-radius: 12px !important;
+    padding-block: 3% !important;
+    margin-block: 3% !important;
+}
+
+.btn-secondary {
+    color: black !important;
+    background-color: #fff !important;
+    border-radius: 12px !important;
+    padding-block: 3% !important;
+    margin-block: 3% !important;
+}
+
+.text-end {
+    text-align: end !important;
+}
+
+.text-field {
+    margin-block: 2.5% !important;
+}
+
+.row {
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
+a,
+a:visited,
+a:hover,
+a:focus {
+    color: #000;
+    font-weight: 700;
+}

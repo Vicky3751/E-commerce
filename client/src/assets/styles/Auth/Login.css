@@ -1,0 +1,18 @@
+.auth-box{
+    width: 100vw;
+    height: 100vh;
+}
+.sign-in{
+    font-size: 42px;
+    margin-block: 2%;
+}
+.auth-logo{
+    position: absolute !important;
+    top: 15px;
+    left: 15px;
+}
+
+.text-field{
+    max-width: 100% !important;
+    min-width: 100% !important;
+}
