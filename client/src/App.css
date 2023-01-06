@@ -46,3 +46,8 @@ a:focus {
     color: #000;
     font-weight: 700;
 }
+
+.MuiTablePagination-toolbar{
+    display: flex !important;
+    align-items: baseline !important;
+}
