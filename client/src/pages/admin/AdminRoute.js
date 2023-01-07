@@ -7,6 +7,8 @@ import SideBar from "../../common/SideBar"
 import "../../assets/styles/Admin.css"
 import ReportedUsers from './misc/reported-users/ReportedUsers'
 import FraudProducts from './misc/fraud-products/FraudProducts'
+import AddUser from './misc/add-user/AddUser'
+import AddProduct from './misc/add-product/AddProduct'
 const AdminRoute = () => {
   return (
     <>
@@ -22,6 +24,8 @@ const AdminRoute = () => {
             <Route path="/details/*" element={<MiscRoutes />} />
             <Route path="/report/*" element={<ReportedUsers />} />
             <Route path="/fraud/*" element={<FraudProducts />} />
+            <Route path="/add/user/*" element={<AddUser />} />
+            <Route path="/add/product/*" element={<AddProduct />} />
           </Routes>
         </div>
       </div>
