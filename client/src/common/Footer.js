@@ -1,4 +1,4 @@
-import { Instagram, Mail, MailOutline, Send, Twitter, WhatsApp } from '@mui/icons-material'
+import { Instagram, MailOutline, Send, Twitter, WhatsApp } from '@mui/icons-material'
 import { TextField } from '@mui/material'
 import React from 'react'
 import "../assets/styles/Footer.css"
@@ -19,10 +19,10 @@ const Footer = () => {
                                 </div>
                                 <div className="footer-social-icon">
                                     <span>Follow us</span>
-                                    <a href="#"><Instagram /></a>
-                                    <a href="#"><MailOutline /></a>
-                                    <a href="#"><WhatsApp /></a>
-                                    <a href="#"><Twitter /></a>
+                                    <a href="/"><Instagram /></a>
+                                    <a href="/"><MailOutline /></a>
+                                    <a href="/"><WhatsApp /></a>
+                                    <a href="/"><Twitter /></a>
                                 </div>
                             </div>
                         </div>
@@ -32,11 +32,11 @@ const Footer = () => {
                                     <h3>Useful Links</h3>
                                 </div>
                                 <ul>
-                                    <li><a href="#">Home</a></li>
-                                    <li><a href="#">about</a></li>
-                                    <li><a href="#">services</a></li>
-                                    <li><a href="#">portfolio</a></li>
-                                    <li><a href="#">Contact</a></li>
+                                    <li><a href="/">Home</a></li>
+                                    <li><a href="/">about</a></li>
+                                    <li><a href="/">services</a></li>
+                                    <li><a href="/">portfolio</a></li>
+                                    <li><a href="/">Contact</a></li>
 
                                 </ul>
                             </div>
@@ -47,10 +47,10 @@ const Footer = () => {
                                     <h3>Useful Links</h3>
                                 </div>
                                 <ul>
-                                    <li><a href="#">Home</a></li>
-                                    <li><a href="#">about</a></li>
-                                    <li><a href="#">services</a></li>
-                                    <li><a href="#">portfolio</a></li>
+                                    <li><a href="/">Home</a></li>
+                                    <li><a href="/">about</a></li>
+                                    <li><a href="/">services</a></li>
+                                    <li><a href="/">portfolio</a></li>
 
                                 </ul>
                             </div>
@@ -65,11 +65,11 @@ const Footer = () => {
                                 </div>
                                 <div className="subscribe-form">
                                     <TextField autoFocus={true} className='col-md-12 text-field' id="standard-basic" label="Email" variant="standard" InputProps={{ disableUnderline: true }} sx={{
-                                        input: { color: '#000' }, "& .MuiInputLabel-root": { color: '#000' }, "& .MuiOutlinedInput-root": {
+                                        input: { color: '/000' }, "& .MuiInputLabel-root": { color: '/000' }, "& .MuiOutlinedInput-root": {
                                             "& > fieldset": { borderColor: "orange" },
                                         },
-                                        borderBottom: "1px solid #000",
-                                        color: "#000"
+                                        borderBottom: "1px solid /000",
+                                        color: "/000"
                                     }} />
                                 </div>
                                 <div className='pos'>
@@ -91,11 +91,11 @@ const Footer = () => {
                         <div className="col-xl-6 col-lg-6 d-none d-lg-block text-right">
                             <div className="footer-menu">
                                 <ul>
-                                    <li><a href="#">Home</a></li>
-                                    <li><a href="#">Terms</a></li>
-                                    <li><a href="#">Privacy</a></li>
-                                    <li><a href="#">Policy</a></li>
-                                    <li><a href="#">Contact</a></li>
+                                    <li><a href="/">Home</a></li>
+                                    <li><a href="/">Terms</a></li>
+                                    <li><a href="/">Privacy</a></li>
+                                    <li><a href="/">Policy</a></li>
+                                    <li><a href="/">Contact</a></li>
                                 </ul>
                             </div>
                         </div>

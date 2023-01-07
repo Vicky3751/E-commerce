@@ -43,7 +43,7 @@ const Register = (props) => {
           <div className="row justify-content-between align-items-center">
             <div className="col-md-12 d-flex justify-content-start align-items-center flex-wrap">
               <Checkbox className='' sx={{ color: '#000000', '&.Mui-checked': { color: '#000000', }, }} />
-              I agree with <a className='p-2'>Privacy Policy</a > and <a className='p-2'>Terms of Use</a>
+              I agree with <a href='/' className='p-2'>Privacy Policy</a > and <a href='/' className='p-2'>Terms of Use</a>
             </div>
           </div>
           <button className="btn btn-primary col-md-12">
