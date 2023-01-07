@@ -11,6 +11,11 @@ const UserReports = () => {
       options: {
         filter: true,
         sort: true,
+        customBodyRender: () => {
+          return (
+            <img width={140} height={35} src={require("../../../../assets/images/logo.png")} />
+          )
+        }
       }
     },
     {
@@ -45,11 +50,22 @@ const UserReports = () => {
     { name: "John Walsh", company: "Test Corp", city: "Hartford", state: "CT" },
     { name: "Bob Herm", company: "Test Corp", city: "Tampa", state: "FL" },
     { name: "James Houston", company: "Test Corp", city: "Dallas", state: "TX" },
+    { name: "Joe James", company: "Test Corp", city: "Yonkers", state: "NY" },
+    { name: "John Walsh", company: "Test Corp", city: "Hartford", state: "CT" },
+    { name: "Bob Herm", company: "Test Corp", city: "Tampa", state: "FL" },
+    { name: "James Houston", company: "Test Corp", city: "Dallas", state: "TX" },
+    { name: "Joe James", company: "Test Corp", city: "Yonkers", state: "NY" },
+    { name: "John Walsh", company: "Test Corp", city: "Hartford", state: "CT" },
+    { name: "Bob Herm", company: "Test Corp", city: "Tampa", state: "FL" },
+    { name: "James Houston", company: "Test Corp", city: "Dallas", state: "TX" },
+    { name: "Joe James", company: "Test Corp", city: "Yonkers", state: "NY" },
+    { name: "John Walsh", company: "Test Corp", city: "Hartford", state: "CT" },
+    { name: "Bob Herm", company: "Test Corp", city: "Tampa", state: "FL" },
+    { name: "James Houston", company: "Test Corp", city: "Dallas", state: "TX" },
   ];
 
   const options = {
     filterType: 'checkbox',
-    tableBodyHeight: '75vh',
     onRowClick: (a, b) => handleEvent(a, b),
     onRowsDelete: (a, b) => deletedrow(a, b),
     print: false,

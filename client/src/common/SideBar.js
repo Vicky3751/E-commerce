@@ -15,18 +15,18 @@ const SideBar = () => {
         </div>
         <Menu renderExpandIcon={({ open }) => <span>{open ? '-' : '+'}</span>} >
           <SubMenu defaultOpen label="Dashboard" icon={<Dashboard />}>
-            <MenuItem active routerLink={<Link to="/documentation" />} icon={<Person />}> Users</MenuItem>
-            <MenuItem routerLink={<Link to="/documentation" />} icon={<BarChart />}> Reports</MenuItem>
-            <MenuItem routerLink={<Link to="/documentation" />} icon={<ShoppingCart />}> Orders</MenuItem>
+            <MenuItem routerLink={<Link to="/admin/dashboard/users" />} icon={<Person />}> Users</MenuItem>
+            <MenuItem routerLink={<Link to="/admin/dashboard/products" />} icon={<BarChart />}> Reports</MenuItem>
+            <MenuItem routerLink={<Link to="/admin/dashboard/orders" />} icon={<ShoppingCart />}> Orders</MenuItem>
           </SubMenu>
           <SubMenu defaultOpen label="Reports" icon={<Assessment />}>
-            <MenuItem active routerLink={<Link to="/documentation" />} icon={<Person />}> Users</MenuItem>
-            <MenuItem routerLink={<Link to="/documentation" />} icon={<BarChart />}> Reports</MenuItem>
-            <MenuItem routerLink={<Link to="/documentation" />} icon={<ShoppingCart />}> Orders</MenuItem>
+            <MenuItem routerLink={<Link to="/admin/reports/users" />} icon={<Person />}> Users</MenuItem>
+            <MenuItem routerLink={<Link to="/admin/reports/products" />} icon={<BarChart />}> Reports</MenuItem>
+            <MenuItem routerLink={<Link to="/admin/reports/orders" />} icon={<ShoppingCart />}> Orders</MenuItem>
           </SubMenu>
           <SubMenu defaultOpen label="Others" icon={<MiscellaneousServices />}>
-            <MenuItem routerLink={<Link to="/documentation" />} icon={<PersonOff />}> Reported Users</MenuItem>
-            <MenuItem routerLink={<Link to="/documentation" />} icon={<Block />}> Fraud Products</MenuItem>
+            <MenuItem routerLink={<Link to="/admin/report" />} icon={<PersonOff />}> Reported Users</MenuItem>
+            <MenuItem routerLink={<Link to="/admin/fraud" />} icon={<Block />}> Fraud Products</MenuItem>
           </SubMenu>
           <MenuItem  icon={<Info />}> About Us</MenuItem>
           <MenuItem  icon={<Phone />}> Contact Us</MenuItem>

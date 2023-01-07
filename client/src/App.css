@@ -68,3 +68,7 @@ a:focus {
 *::-webkit-scrollbar { 
     display: none;  /* Safari and Chrome */
 }
+
+.tss-131sses-MUIDataTable-responsiveScroll{
+    max-height: 100% !important;
+}
