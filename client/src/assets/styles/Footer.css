@@ -165,4 +165,5 @@ ul {
     position: relative;
     left: 90%;
     bottom: 40px;
+    max-width: 30px !important;
 }

@@ -47,12 +47,12 @@ a:focus {
     font-weight: 700;
 }
 
-.MuiTablePagination-toolbar{
+.MuiTablePagination-toolbar {
     display: flex !important;
     align-items: baseline !important;
 }
 
-.MuiAppBar-root{
+.MuiAppBar-root {
     background: transparent !important;
     box-shadow: none !important;
 }
@@ -62,13 +62,25 @@ a:focus {
 }
 
 * {
-    -ms-overflow-style: none;  /* Internet Explorer 10+ */
-    scrollbar-width: none;  /* Firefox */
-}
-*::-webkit-scrollbar { 
-    display: none;  /* Safari and Chrome */
+    -ms-overflow-style: none;
+    /* Internet Explorer 10+ */
+    scrollbar-width: none;
+    /* Firefox */
 }
 
-.tss-131sses-MUIDataTable-responsiveScroll{
+*::-webkit-scrollbar {
+    display: none;
+    /* Safari and Chrome */
+}
+
+.tss-131sses-MUIDataTable-responsiveScroll {
     max-height: 100% !important;
+}
+
+.css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root:hover {
+    background-color: transparent !important;
+}
+
+.css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root {
+    color: #000 !important
 }

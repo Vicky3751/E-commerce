@@ -12,7 +12,8 @@ import SearchIcon from '@mui/icons-material/Search';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
-import { LocalMall } from '@mui/icons-material';
+import { Article, ExpandMore, Home, Info, LocalMall, Phone, Storefront } from '@mui/icons-material';
+import { Typography } from '@mui/material';
 
 const Search = styled('div')(({ theme }) => ({
     position: 'relative',
@@ -100,8 +101,8 @@ export default function Header() {
             open={isMenuOpen}
             onClose={handleMenuClose}
         >
-            <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-            <MenuItem onClick={handleMenuClose}>My account</MenuItem>
+            <MenuItem disableRipple onClick={handleMenuClose}>Profile</MenuItem>
+            <MenuItem disableRipple onClick={handleMenuClose}>My account</MenuItem>
         </Menu>
     );
 
@@ -130,18 +131,36 @@ export default function Header() {
                 <StyledInputBase
                     placeholder="Search…"
                     inputProps={{ 'aria-label': 'search' }}
-                    style={{ width: '75%', margin : 'auto' }}
+                    style={{ width: '75%', margin: 'auto' }}
                 />
             </Search>
-            <MenuItem>
+            <MenuItem disableRipple>
+                <IconButton size="large" aria-label="show 4 new mails" color="inherit">
+                    <Home />
+                </IconButton>
+                <p style={{ marginTop: '15px' }}>Home</p>
+            </MenuItem>
+            <MenuItem disableRipple>
+                <IconButton size="large" aria-label="show 4 new mails" color="inherit">
+                    <Storefront />
+                </IconButton>
+                <p style={{ marginTop: '15px' }}>Products</p>
+            </MenuItem>
+            <MenuItem disableRipple>
+                <IconButton size="large" aria-label="show 4 new mails" color="inherit">
+                    <Article />
+                </IconButton>
+                <p style={{ marginTop: '15px' }}>Articles</p>
+            </MenuItem>
+            <MenuItem disableRipple>
                 <IconButton size="large" aria-label="show 4 new mails" color="inherit">
                     <Badge badgeContent={4} color="error">
                         <LocalMall />
                     </Badge>
                 </IconButton>
-                <p style={{ marginTop: '15%' }}>Cart</p>
+                <p style={{ marginTop: '15px' }}>Cart</p>
             </MenuItem>
-            <MenuItem>
+            <MenuItem disableRipple>
                 <IconButton
                     size="large"
                     aria-label="show 17 new notifications"
@@ -151,9 +170,9 @@ export default function Header() {
                         <NotificationsIcon />
                     </Badge>
                 </IconButton>
-                <p style={{ marginTop: '15%' }}>Notifications</p>
+                <p style={{ marginTop: '15px' }}>Notifications</p>
             </MenuItem>
-            <MenuItem onClick={handleProfileMenuOpen}>
+            <MenuItem disableRipple onClick={handleProfileMenuOpen}>
                 <IconButton
                     size="large"
                     aria-label="account of current user"
@@ -163,7 +182,19 @@ export default function Header() {
                 >
                     <AccountCircle />
                 </IconButton>
-                <p style={{ marginTop: '15%' }}>Profile</p>
+                <p style={{ marginTop: '15px' }}>Profile</p>
+            </MenuItem>
+            <MenuItem disableRipple>
+                <IconButton size="large" aria-label="show 4 new mails" color="inherit">
+                    <Info />
+                </IconButton>
+                <p style={{ marginTop: '15px' }}>About Us</p>
+            </MenuItem>
+            <MenuItem disableRipple>
+                <IconButton size="large" aria-label="show 4 new mails" color="inherit">
+                    <Phone />
+                </IconButton>
+                <p style={{ marginTop: '15px' }}>Contact Us</p>
             </MenuItem>
         </Menu>
 
@@ -173,7 +204,7 @@ export default function Header() {
         <Box sx={{ flexGrow: 1 }}>
             <AppBar position="static">
                 <Toolbar>
-                    <IconButton
+                    <IconButton disableRipple
                         size="large"
                         edge="start"
                         color="inherit"
@@ -183,7 +214,26 @@ export default function Header() {
                         <img width={114} height={25} src={require("../assets/images/logo.png")} alt="" />
                     </IconButton>
 
-                    <Box sx={{ flexGrow: 1 }} />
+                    <Box sx={{ flexGrow: 1, display: 'flex', justifyContent: 'center' }} >
+                        <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
+                            <MenuItem disableRipple >
+                                <Typography textAlign="center">Home</Typography>
+                            </MenuItem>
+                            <MenuItem disableRipple >
+                                <Typography textAlign="center">Products</Typography>
+                                <ExpandMore />
+                            </MenuItem>
+                            <MenuItem disableRipple >
+                                <Typography  textAlign="center">Articles</Typography>
+                            </MenuItem>
+                            <MenuItem disableRipple >
+                                <Typography  textAlign="center">About Us</Typography>
+                            </MenuItem>
+                            <MenuItem disableRipple >
+                                <Typography  textAlign="center">Contact Us</Typography>
+                            </MenuItem>
+                        </Box>
+                    </Box>
                     <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
                         <Search>
                             <IconButton style={{ width: 50 }} onClick={() => slideInput()}>
