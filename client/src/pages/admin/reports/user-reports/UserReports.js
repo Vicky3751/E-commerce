@@ -13,7 +13,7 @@ const UserReports = () => {
         sort: true,
         customBodyRender: () => {
           return (
-            <img width={140} height={35} src={require("../../../../assets/images/logo.png")} />
+            <img width={140} height={35} src={require("../../../../assets/images/logo.png")} alt=""/>
           )
         }
       }
