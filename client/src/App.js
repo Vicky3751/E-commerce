@@ -4,13 +4,15 @@ import AuthGuard from './middleware/Guard/AuthGuard';
 import AuthRoute from './pages/auth/AuthRoute';
 import AdminRoute from './pages/admin/AdminRoute';
 import MainRoutes from './pages/misc/MainRoutes';
+import NotFound from './pages/misc/NotFound';
 
 function App() {
 
   return (
     <Router>
       <Routes>
-        <Route path="/*" element={<AuthGuard isLoggedIn={true}><MainRoutes /></AuthGuard>} />
+        <Route path="/*" element={<NotFound/>} />
+        <Route path="/" exact={true} element={<AuthGuard isLoggedIn={true}><MainRoutes /></AuthGuard>} />
         <Route path="/auth/*" element={<AuthRoute />} />
         <Route path="/admin/*" element={<AuthGuard isLoggedIn={true}><AdminRoute /></AuthGuard>} />
       </Routes>
