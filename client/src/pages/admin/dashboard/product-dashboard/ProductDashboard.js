@@ -1,8 +1,6 @@
 import React from 'react'
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
-import Header from '../../../../common/Header';
-import Footer from '../../../../common/Footer';
 
 const ProductDashboard = () => {
   const line = {
@@ -198,8 +196,6 @@ const ProductDashboard = () => {
   
   return (
     <div>
-      <Header/>
-      <Footer/>
       <HighchartsReact highcharts={Highcharts} options={line} />
       <HighchartsReact highcharts={Highcharts} options={area} />
       <HighchartsReact highcharts={Highcharts} options={bar} />

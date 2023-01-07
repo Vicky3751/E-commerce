@@ -1,0 +1,20 @@
+.admin-box {
+    height: 100vh;
+    max-height: 100vh !important;
+    overflow: scroll !important;
+}
+
+.sidebar-box {
+    min-width: 15vw !important;
+    max-width: 15vw !important;
+    max-height: 100vh !important;
+    overflow: scroll !important;
+}
+
+.main-box {
+    min-width: 85vw !important;
+    max-width: 85vw !important;
+    padding: 15px !important;
+    max-height: 100vh !important;
+    overflow: scroll !important;
+}
