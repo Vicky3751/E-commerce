@@ -3,7 +3,7 @@ import { Navigate, Route, Routes } from 'react-router-dom'
 import ForgotPassword from './forgot-password/ForgotPassword'
 import Login from './login/Login'
 import Register from './register/Register'
-import '../../assets/styles/Auth/Login.css'
+import '../../assets/styles/Auth.css'
 const AuthRoute = () => {
     return (
         <>
