@@ -4,7 +4,7 @@ import Carousel from 'react-bootstrap/Carousel';
 import Spinner from 'react-bootstrap/Spinner';
 
 const Home = () => {
-  const [spin, setSpin] = React.useState(true)
+  const [spin, setSpin] = React.useState(false)
   return (
     spin ?
       <div className='spinner'>
