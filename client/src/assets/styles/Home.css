@@ -1,0 +1,8 @@
+.carousal-box {
+    max-height: 95vh !important;
+}
+
+.carousal-box img {
+    max-height: 95vh !important;
+    width: 100% !important;
+}

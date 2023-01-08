@@ -12,8 +12,9 @@ import SearchIcon from '@mui/icons-material/Search';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
-import { Article, ExpandMore, Home, Info, LocalMall, Phone, Storefront } from '@mui/icons-material';
+import { Article, ExpandLess, ExpandMore, Home, Info, LocalMall, Phone, Storefront } from '@mui/icons-material';
 import { Typography } from '@mui/material';
+import Card from 'react-bootstrap/Card';
 
 const Search = styled('div')(({ theme }) => ({
     position: 'relative',
@@ -56,6 +57,45 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 
 export default function Header() {
+
+    // detect scrolling 
+    const [y, setY] = React.useState(window.scrollY);
+    const [scrollingDown, setScrollingDown] = React.useState(false)
+    const [showProducts, setShowProducts] = React.useState(false)
+
+
+
+    const handleNavigation = React.useCallback(
+        e => {
+            const window = e.currentTarget;
+            if (y > window.scrollY) {
+                // console.log("scrolling up");
+            } else if (y < window.scrollY) {
+                // console.log("scrolling down");
+                setScrollingDown(true)
+            } else if (y = window.scrollY) {
+                // console.log("ZERO")
+            }
+            if (window.scrollY == 0) {
+                setScrollingDown(false)
+            }
+            setY(window.scrollY);
+        }, [y]
+    );
+
+    React.useEffect(() => {
+        setY(window.scrollY);
+        window.addEventListener("scroll", handleNavigation);
+
+        return () => {
+            window.removeEventListener("scroll", handleNavigation);
+        };
+    }, [handleNavigation]);
+
+
+
+
+
     const [anchorEl, setAnchorEl] = React.useState(null);
     const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
     const [InputBar, setInputBar] = React.useState(false);
@@ -201,7 +241,7 @@ export default function Header() {
     );
 
     return (
-        <Box sx={{ flexGrow: 1 }}>
+        <Box sx={{}} className={scrollingDown ? "header-scrolling" : "header-static"}>
             <AppBar position="static">
                 <Toolbar>
                     <IconButton disableRipple
@@ -219,18 +259,24 @@ export default function Header() {
                             <MenuItem disableRipple >
                                 <Typography textAlign="center">Home</Typography>
                             </MenuItem>
-                            <MenuItem disableRipple >
+                            <MenuItem disableRipple onClick={() => { setShowProducts(!showProducts); setScrollingDown(true) }}>
                                 <Typography textAlign="center">Products</Typography>
-                                <ExpandMore />
+                                {
+                                    showProducts ?
+                                        <ExpandLess />
+                                        :
+                                        <ExpandMore />
+
+                                }
                             </MenuItem>
                             <MenuItem disableRipple >
-                                <Typography  textAlign="center">Articles</Typography>
+                                <Typography textAlign="center">Articles</Typography>
                             </MenuItem>
                             <MenuItem disableRipple >
-                                <Typography  textAlign="center">About Us</Typography>
+                                <Typography textAlign="center">About Us</Typography>
                             </MenuItem>
                             <MenuItem disableRipple >
-                                <Typography  textAlign="center">Contact Us</Typography>
+                                <Typography textAlign="center">Contact Us</Typography>
                             </MenuItem>
                         </Box>
                     </Box>
@@ -288,6 +334,52 @@ export default function Header() {
                         </IconButton>
                     </Box>
                 </Toolbar>
+                {
+                    showProducts &&
+                    <Card className='header-card' >
+                        <Card.Title className='text-center header-card-title'>Categories</Card.Title>
+                        <Card.Body className='row'>
+                            <div className="col-md-4 header-card-body">
+                                <div className='header-card-body-text'>
+                                    Electronics
+                                </div>
+                                <div className='header-card-body-text'>
+                                    Shoes
+                                </div>
+                                <div className='header-card-body-text'>
+                                    Clothes
+                                </div>
+                                <div className='header-card-body-text'>
+                                    Bags
+                                </div>
+                                <div className='header-card-body-text'>
+                                    Appliances
+                                </div>
+                            </div>
+                            <div className="col-md-4 header-card-body">
+                                <div className='header-card-body-text'>
+                                    Electronics
+                                </div>
+                                <div className='header-card-body-text'>
+                                    Shoes
+                                </div>
+                                <div className='header-card-body-text'>
+                                    Clothes
+                                </div>
+                                <div className='header-card-body-text'>
+                                    Bags
+                                </div>
+                                <div className='header-card-body-text'>
+                                    Appliances
+                                </div>
+
+                            </div>
+                            <div className="col-md-4 header-card-body">
+                                <img width="75%" height="100%" className='header-card-body-img' src={require('../assets/images/product2.jpg')} alt="" />
+                            </div>
+                        </Card.Body>
+                    </Card>
+                }
             </AppBar>
             {renderMobileMenu}
             {renderMenu}
