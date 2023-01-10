@@ -9,12 +9,22 @@ import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import { ProSidebarProvider } from 'react-pro-sidebar';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Provider } from 'react-redux'
+import { createStore } from 'redux';
+import rootReducer from './store/reducers/rootReducer';
 const root = ReactDOM.createRoot(document.getElementById('root'));
+const store = createStore(
+  rootReducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ &&
+  window.__REDUX_DEVTOOLS_EXTENSION__()
+)
 root.render(
   <React.StrictMode>
-    <ProSidebarProvider>
-      <App />
-    </ProSidebarProvider>
+    <Provider store={store}>
+      <ProSidebarProvider>
+        <App />
+      </ProSidebarProvider>
+    </Provider>
   </React.StrictMode>
 );
 
