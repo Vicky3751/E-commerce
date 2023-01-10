@@ -73,10 +73,8 @@ export default function Header() {
             } else if (y < window.scrollY) {
                 // console.log("scrolling down");
                 setScrollingDown(true)
-            } else if (y = window.scrollY) {
-                // console.log("ZERO")
             }
-            if (window.scrollY == 0) {
+            if (window.scrollY === 0) {
                 setScrollingDown(false)
             }
             setY(window.scrollY);
