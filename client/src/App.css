@@ -152,3 +152,7 @@ a:focus {
     width: 5rem !important;
     height: 5rem !important;
 }
+
+button:focus{
+    outline: none !important;
+}

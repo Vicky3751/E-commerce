@@ -1,0 +1,65 @@
+.accordion-button {
+    background-color: #f5f5f5 !important;
+    font-size: 22px !important;
+    font-weight: bold !important;
+    color: black !important;
+    padding-inline: 50px !important;
+}
+
+.filter-text {
+    font-size: 24px !important;
+    font-weight: bold !important;
+    color: black !important;
+}
+
+.filter-heading-text {
+    font-size: 20px !important;
+    font-weight: 700 !important;
+}
+
+.filter-heading-subtext {
+    opacity: 75% !important;
+    font-size: 18px !important;
+    cursor: pointer !important;
+    margin-inline: 1em !important;
+}
+
+.filter-heading-subtext:hover {
+    opacity: 100% !important;
+    font-weight: 600 !important;
+}
+
+.color-filter-colors {
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 50% !important;
+    cursor: pointer !important;
+}
+
+.color-filter-colors:hover {
+    transform: scale(1.05);
+}
+
+.customer-review-box {
+    cursor: pointer !important;
+}
+
+.customer-review-box:hover {
+    transform: scale(1.01);
+
+}
+
+.products-box-row, .products-box-row .col-md-10{
+    min-height: 100vh !important;
+
+}
+
+.filter-accordian .accordion-button{
+    padding-inline: 25px !important;
+    background-color: #fff !important;
+    border: none !important;
+}
+
+.filter-accordian *{
+    border: none !important;
+}
