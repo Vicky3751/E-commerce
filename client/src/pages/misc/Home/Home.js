@@ -495,6 +495,9 @@ const Home = () => {
               borderBottom: "1px solid #000",
               color: "#000"
             }} />
+            <div className="tab-nav-btn-box d-flex justify-content-end align-items-center">
+              <button className="btn btn-primary">Subscribe</button>
+            </div>
           </div>
         </div>
         <div className="col-md-6">
