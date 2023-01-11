@@ -12,6 +12,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Provider } from 'react-redux'
 import { createStore } from 'redux';
 import rootReducer from './store/reducers/rootReducer';
+import "react-image-gallery/styles/css/image-gallery.css";
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const store = createStore(
   rootReducer,
