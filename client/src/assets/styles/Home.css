@@ -6,3 +6,135 @@
     max-height: 95vh !important;
     width: 100% !important;
 }
+
+.bi {
+    font-size: 25px !important;
+}
+
+
+
+.grant-box .col-md-3 {
+    margin-block: 5% !important;
+}
+
+.grant-box-single {
+    font-size: 18px;
+    font-weight: 700;
+    margin-inline: 10px;
+}
+
+.grant-box-single-text {
+    font-size: 17px;
+    font-weight: 500 !important;
+    opacity: 50% !important;
+}
+
+.newsletter-box {
+    width: 100% !important;
+    margin-block: 5% !important;
+}
+
+.newsletter-box-text {
+    font-size: 5vh;
+    font-weight: 700;
+}
+
+.newsletter-left-box {
+    max-width: 75% !important;
+    margin: auto !important;
+}
+
+.tab-nav *, .tab-nav{
+    border : none !important
+}
+
+.tab-nav{
+    justify-content: center;
+    margin-block: 5% !important;
+}
+.tab-nav .nav-item{
+    font-size: 22px !important;
+    color: black !important;
+}
+.tab-nav .nav-link {
+    font-size: 22px !important;
+    color: black !important;
+    opacity: 0.5;
+}
+.tab-nav .active {
+    opacity: 1;
+    text-decoration: underline !important;
+}
+
+.tab-nav-box{
+    width: 80% !important;
+    margin: auto !important;
+}
+
+.new-arrival-box{
+    width: 80% !important;
+    margin: auto;
+    height: 50vh !important;
+}
+.new-arrival-box-text{
+    font-size: 32px !important;
+    font-weight: 700 !important;
+    margin-block: 3% !important;
+}
+
+
+.new-arrival-card{
+    /* background: red; */
+    width: 300px !important;
+    height: 300px !important;
+}
+.new-arrival-car-img{
+    width: 250px !important;
+    height: 250px !important;
+    margin-inline: 25px !important;
+}
+.new-arrival-car-img img {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 10px !important;
+}
+.new-arrival-car-text{
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    text-align: center !important;
+    padding-block: 10px;
+}
+
+.new-arrival-card:hover{
+    transform: scale(1.01);
+    box-shadow: 10px 10px 10px 10px #f5f5f5;
+}
+.horizontal-scroller{
+    /* background-color: red; */
+    max-height: 30vh !important;
+    height: 30vh !important;
+}
+
+.customer-review-box{
+     /* background: red; */
+     width: 375px !important;
+     /* height: 300px !important; */
+}
+.customer-review-name{
+    font-size: 18px !important;
+    font-weight: bold !important;
+}
+.customer-review-product-name{
+    font-size: 16px !important;
+    opacity: 50% !important;
+    padding-block: 10px;
+    font-weight: 600;
+}
+.customer-review-product-text{
+    font-size: 14px !important;
+}
+
+.customer-review-box:hover{
+    border: 0.1px solid #f5f5f5;
+    border-radius: 12px !important;
+}
