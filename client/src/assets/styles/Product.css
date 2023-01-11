@@ -11,6 +11,11 @@
     font-weight: bold !important;
     color: black !important;
 }
+.filter-sort-text{
+    font-size: 16px !important;
+    font-weight: bold !important;
+    color: black !important;
+}
 
 .filter-heading-text {
     font-size: 20px !important;
@@ -63,3 +68,37 @@
 .filter-accordian *{
     border: none !important;
 }
+
+#dropdown-basic{
+    background-color: #fff !important;
+    border: 1px solid black !important;
+}
+
+.products-image-box{
+    width: 300px !important;
+    height: 250px !important;
+    margin-block: 25px !important;
+    /* margin-inline: 25px !important; */
+}
+.products-image-box img {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 10px !important;
+}
+
+.products-price ,.products-name{
+    font-size:18px !important;
+    font-weight: bold !important;
+}
+.product-price-fade{
+    opacity: 50% !important;
+    text-decoration: line-through !important;
+}
+.product-single{
+    cursor: pointer;
+}
+
+
+.product-single:hover{
+    transform: scale(1.03);
+}   

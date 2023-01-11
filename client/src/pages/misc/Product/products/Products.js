@@ -2,6 +2,9 @@ import React from 'react'
 import Carousel from 'react-bootstrap/Carousel';
 import MultiRangeSlider from '../../../../components/MultiRangeSlider';
 import Accordion from 'react-bootstrap/Accordion';
+import Dropdown from 'react-bootstrap/Dropdown';
+import Chip from '@mui/material/Chip';
+import Stack from '@mui/material/Stack';
 const Products = () => {
     return (
         <>
@@ -52,7 +55,7 @@ const Products = () => {
             <div className="products-box container">
                 <div className="row products-box-row justify-content-center align-items center">
                     <div className="col-md-2 m-0 p-0">
-                        <Accordion  className='filter-accordian'>
+                        <Accordion className='filter-accordian'>
                             <Accordion.Item eventKey="0">
                                 <Accordion.Header>Filter</Accordion.Header>
                                 <Accordion.Body>
@@ -175,15 +178,149 @@ const Products = () => {
                         Filter
                     </div> */}
 
-                    <div className="col-md-10 row">
-                        <div className="col-md-12">
-                            Sort by
+                    <div className="col-md-10 row justify-content-center align-items-start align-content-start">
+                        <div className="col-md-12 d-flex justify-content-between  align-items-center  filter-sort-text text-end my-4">
+                            <div className='d-flex justify-content-center align-items-center'>
+                                <div className='mx-3'>
+                                    Selected Filter :
+                                </div>
+                                <Stack direction="row" spacing={1}>
+                                    <Chip label="Deletable" value="Deletable" onDelete={(e) => console.log(e, "Deletable")} />
+                                    <Chip label="Dee" value="Dee" onDelete={(e) => console.log(e.value)} />
+                                </Stack>
+                            </div>
+
+                            <Dropdown>
+                                <Dropdown.Toggle className='filter-sort-text' id="dropdown-basic">
+                                    Sort By
+                                </Dropdown.Toggle>
+
+                                <Dropdown.Menu>
+                                    <Dropdown.Item href="#/action-4">Rating</Dropdown.Item>
+                                    <Dropdown.Item href="#/action-3">Newest</Dropdown.Item>
+                                    <Dropdown.Item href="#/action-1">Price- Low to High</Dropdown.Item>
+                                    <Dropdown.Item href="#/action-2">Price- High to Low</Dropdown.Item>
+                                </Dropdown.Menu>
+                            </Dropdown>
                         </div>
-                        <div className="col-md-3">Hello</div>
-                        <div className="col-md-3">Hello</div>
-                        <div className="col-md-3">Hello</div>
-                        <div className="col-md-3">Hello</div>
-                        <div className="col-md-3">Hello</div>
+                        <div className="row align-items-start">
+                            <div className="row col-md-3 my-3 product-single justify-content-center">
+                                <div className="products-image-box">
+                                    <img src={require("../../../../assets/images/product.jpg")} alt="" />
+                                </div>
+                                <div className='customer-review-box mt-2  d-flex justify-content-center align-items-center'>
+                                    <img src={require('../../../../assets/images/star.jpg')} style={{ borderRadius: '50%', marginRight: 5 }} alt="" />
+                                    <img src={require('../../../../assets/images/star.jpg')} style={{ borderRadius: '50%', marginRight: 5 }} alt="" />
+                                    <img src={require('../../../../assets/images/star.jpg')} style={{ borderRadius: '50%', marginRight: 5 }} alt="" />
+                                    <img src={require('../../../../assets/images/star.jpg')} style={{ borderRadius: '50%', marginRight: 5 }} alt="" />
+                                    <img src={require('../../../../assets/images/halfstar.jpg')} style={{ borderRadius: '50%', marginRight: 5 }} alt="" />
+                                    4+
+                                </div>
+                                <div className="mt-2  products-name text-center">
+                                    Nike Shoes
+                                </div>
+                                <div className="products-price  text-center">
+                                    $200
+                                    <span className="mx-2 product-price-fade">
+                                        $500.00
+                                    </span>
+                                </div>
+                            </div>
+                            <div className="row col-md-3 my-3 product-single justify-content-center">
+                                <div className="products-image-box">
+                                    <img src={require("../../../../assets/images/product.jpg")} alt="" />
+                                </div>
+                                <div className='customer-review-box mt-2  d-flex justify-content-center align-items-center'>
+                                    <img src={require('../../../../assets/images/star.jpg')} style={{ borderRadius: '50%', marginRight: 5 }} alt="" />
+                                    <img src={require('../../../../assets/images/star.jpg')} style={{ borderRadius: '50%', marginRight: 5 }} alt="" />
+                                    <img src={require('../../../../assets/images/star.jpg')} style={{ borderRadius: '50%', marginRight: 5 }} alt="" />
+                                    <img src={require('../../../../assets/images/star.jpg')} style={{ borderRadius: '50%', marginRight: 5 }} alt="" />
+                                    <img src={require('../../../../assets/images/halfstar.jpg')} style={{ borderRadius: '50%', marginRight: 5 }} alt="" />
+                                    4+
+                                </div>
+                                <div className="mt-2  products-name text-center">
+                                    Nike Shoes
+                                </div>
+                                <div className="products-price  text-center">
+                                    $200
+                                    <span className="mx-2 product-price-fade">
+                                        $500.00
+                                    </span>
+                                </div>
+                            </div>
+                            <div className="row col-md-3 my-3 product-single justify-content-center">
+                                <div className="products-image-box">
+                                    <img src={require("../../../../assets/images/product.jpg")} alt="" />
+                                </div>
+                                <div className='customer-review-box mt-2  d-flex justify-content-center align-items-center'>
+                                    <img src={require('../../../../assets/images/star.jpg')} style={{ borderRadius: '50%', marginRight: 5 }} alt="" />
+                                    <img src={require('../../../../assets/images/star.jpg')} style={{ borderRadius: '50%', marginRight: 5 }} alt="" />
+                                    <img src={require('../../../../assets/images/star.jpg')} style={{ borderRadius: '50%', marginRight: 5 }} alt="" />
+                                    <img src={require('../../../../assets/images/star.jpg')} style={{ borderRadius: '50%', marginRight: 5 }} alt="" />
+                                    <img src={require('../../../../assets/images/halfstar.jpg')} style={{ borderRadius: '50%', marginRight: 5 }} alt="" />
+                                    4+
+                                </div>
+                                <div className="mt-2  products-name text-center">
+                                    Nike Shoes
+                                </div>
+                                <div className="products-price  text-center">
+                                    $200
+                                    <span className="mx-2 product-price-fade">
+                                        $500.00
+                                    </span>
+                                </div>
+                            </div>
+                            <div className="row col-md-3 my-3 product-single justify-content-center">
+                                <div className="products-image-box">
+                                    <img src={require("../../../../assets/images/product.jpg")} alt="" />
+                                </div>
+                                <div className='customer-review-box mt-2  d-flex justify-content-center align-items-center'>
+                                    <img src={require('../../../../assets/images/star.jpg')} style={{ borderRadius: '50%', marginRight: 5 }} alt="" />
+                                    <img src={require('../../../../assets/images/star.jpg')} style={{ borderRadius: '50%', marginRight: 5 }} alt="" />
+                                    <img src={require('../../../../assets/images/star.jpg')} style={{ borderRadius: '50%', marginRight: 5 }} alt="" />
+                                    <img src={require('../../../../assets/images/star.jpg')} style={{ borderRadius: '50%', marginRight: 5 }} alt="" />
+                                    <img src={require('../../../../assets/images/halfstar.jpg')} style={{ borderRadius: '50%', marginRight: 5 }} alt="" />
+                                    4+
+                                </div>
+                                <div className="mt-2  products-name text-center">
+                                    Nike Shoes
+                                </div>
+                                <div className="products-price  text-center">
+                                    $200
+                                    <span className="mx-2 product-price-fade">
+                                        $500.00
+                                    </span>
+                                </div>
+                            </div>
+                            <div className="row col-md-3 my-3 product-single justify-content-center">
+                                <div className="products-image-box">
+                                    <img src={require("../../../../assets/images/product.jpg")} alt="" />
+                                </div>
+                                <div className='customer-review-box mt-2  d-flex justify-content-center align-items-center'>
+                                    <img src={require('../../../../assets/images/star.jpg')} style={{ borderRadius: '50%', marginRight: 5 }} alt="" />
+                                    <img src={require('../../../../assets/images/star.jpg')} style={{ borderRadius: '50%', marginRight: 5 }} alt="" />
+                                    <img src={require('../../../../assets/images/star.jpg')} style={{ borderRadius: '50%', marginRight: 5 }} alt="" />
+                                    <img src={require('../../../../assets/images/star.jpg')} style={{ borderRadius: '50%', marginRight: 5 }} alt="" />
+                                    <img src={require('../../../../assets/images/halfstar.jpg')} style={{ borderRadius: '50%', marginRight: 5 }} alt="" />
+                                    4+
+                                </div>
+                                <div className="mt-2  products-name text-center">
+                                    Nike Shoes
+                                </div>
+                                <div className="products-price  text-center">
+                                    $200
+                                    <span className="mx-2 product-price-fade">
+                                        $500.00
+                                    </span>
+                                </div>
+                            </div>
+
+
+
+                            <div className="tab-nav-btn-box d-flex justify-content-center align-items-center my-3">
+                                <button className="btn btn-primary">Load More</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

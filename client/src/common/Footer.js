@@ -64,7 +64,7 @@ const Footer = () => {
                                     <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
                                 </div>
                                 <div className="subscribe-form">
-                                    <TextField autoFocus={true} className='col-md-12 text-field' id="standard-basic" label="Email" variant="standard" InputProps={{ disableUnderline: true }} sx={{
+                                    <TextField  className='col-md-12 text-field' id="standard-basic" label="Email" variant="standard" InputProps={{ disableUnderline: true }} sx={{
                                         input: { color: '/000' }, "& .MuiInputLabel-root": { color: '/000' }, "& .MuiOutlinedInput-root": {
                                             "& > fieldset": { borderColor: "orange" },
                                         },
