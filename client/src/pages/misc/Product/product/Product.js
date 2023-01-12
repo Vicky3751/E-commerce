@@ -542,7 +542,7 @@ const Product = () => {
                                 <div className='newsletter-box-text'>
                                     Keep Me Updated About BIG Discounts
                                 </div>
-                                <TextField autoFocus={true} className='col-md-12 text-field' id="standard-basic" label="Email" variant="standard" InputProps={{ disableUnderline: true }} sx={{
+                                <TextField  className='col-md-12 text-field' id="standard-basic" label="Email" variant="standard" InputProps={{ disableUnderline: true }} sx={{
                                     input: { color: '#000' }, "& .MuiInputLabel-root": { color: '#000' }, "& .MuiOutlinedInput-root": {
                                         "& > fieldset": { borderColor: "orange" },
                                     },
