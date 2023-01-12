@@ -153,6 +153,25 @@ a:focus {
     height: 5rem !important;
 }
 
-button:focus{
+button:focus {
+    outline: none !important;
+}
+
+.width-100 {
+    min-width: 100% !important;
+    width: 100% !important
+}
+
+.height-100 {
+    min-height: 100% !important;
+    height: 100% !important;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    display: none !important;
+}
+input:focus-visible{
+    border: none !important;
     outline: none !important;
 }

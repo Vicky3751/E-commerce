@@ -1,9 +1,24 @@
-import { TextField } from '@mui/material';
+import { Add, Remove } from '@mui/icons-material';
+import { IconButton, TextField } from '@mui/material';
 import React from 'react'
 import ImageGallery from "react-image-gallery";
 import HorizontalScroll from "react-scroll-horizontal";
 
 const Product = () => {
+    const [quantity, setQuantity] = React.useState(1)
+
+    const quantityIncrement = () => {
+        setQuantity(quantity + 1)
+    }
+    const quantityDecrement = () => {
+        setQuantity(quantity - 1)
+    }
+
+    const quantityChange = (e) => {
+        // console.log(e.target.value)
+        setQuantity(parseInt(e.target.value))
+    }
+
     const images = [
         {
             original: 'https://picsum.photos/id/1018/1000/600/',
@@ -168,7 +183,26 @@ const Product = () => {
                         </div>
                     </div>
                     <div className="col-md-4">
-
+                        <div className="width-100 quantity d-flex py-3 justify-content-around align-items-center">
+                            <div className="minus-plus-box">
+                                <IconButton className="btn" onClick={quantityDecrement} >
+                                    <Remove />
+                                </IconButton>
+                            </div>
+                            <div className="quantitiy-input">
+                                <input type="number" min={0} value={quantity} onChange={(e) => quantityChange(e)} />
+                            </div>
+                            <div className="minus-plus-box">
+                                <button className="btn" onClick={quantityIncrement}>
+                                    <Add />
+                                </button>
+                            </div>
+                        </div>
+                        <div className='width-100'>
+                            <button className="btn btn-primary width-100 py-3 add-to-cart">
+                                Add To Cart
+                            </button>
+                        </div>
                     </div>
                     {/* customer review */}
                     <div className="col-md-12  new-arrival-box" style={{ minWidth: '100%' }} >

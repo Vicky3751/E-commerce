@@ -126,3 +126,19 @@
     text-decoration: line-through !important;
     font-size: 24px !important;
 }
+
+.add-to-cart {
+    font-size: 18px !important;
+    border-radius: 4px !important;
+}
+
+.quantity {
+    background: #f5f5f5 !important;
+}
+
+.quantitiy-input input {
+    border: none !important;
+    max-width: 60px !important;
+    background: transparent !important;
+    text-align: center !important;
+}
