@@ -1,0 +1,12 @@
+.my-account-heading{
+    font-size: 54px !important;
+    margin-block: 10vh !important;
+}
+.account-tabs{
+    min-height: 100vh !important;
+    align-content: flex-start !important;
+}
+.css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected{
+    color: #000 !important;
+    font-weight: 700 !important ;
+}

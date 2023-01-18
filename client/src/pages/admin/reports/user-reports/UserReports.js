@@ -11,11 +11,6 @@ const UserReports = () => {
       options: {
         filter: true,
         sort: true,
-        customBodyRender: () => {
-          return (
-            <img width={140} height={35} src={require("../../../../assets/images/logo.png")} alt=""/>
-          )
-        }
       }
     },
     {
@@ -46,7 +41,7 @@ const UserReports = () => {
   ];
 
   const data = [
-    { name: "Joe James", company: "Test Corp", city: "Yonkers", state: "NY" },
+    { name: <img width={100} height={50} src={require('../../../../assets/images/product.jpg')} alt="" />, company: "Test Corp", city: "Yonkers", state: "NY" },
     { name: "John Walsh", company: "Test Corp", city: "Hartford", state: "CT" },
     { name: "Bob Herm", company: "Test Corp", city: "Tampa", state: "FL" },
     { name: "James Houston", company: "Test Corp", city: "Dallas", state: "TX" },
@@ -66,12 +61,15 @@ const UserReports = () => {
 
   const options = {
     filterType: 'checkbox',
+    selectableRows: 'none',
     onRowClick: (a, b) => handleEvent(a, b),
     onRowsDelete: (a, b) => deletedrow(a, b),
     print: false,
     filter: false,
     viewColumns: false,
-    responsive: "scroll",
+    download: false,
+    rowsPerPage: 3,
+    rowsPerPageOptions: [1, 3, 5, 6],
   };
 
 
