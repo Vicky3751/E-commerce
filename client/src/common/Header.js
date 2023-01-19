@@ -239,9 +239,9 @@ export default function Header() {
     );
 
     return (
-        <Box sx={{}} className={scrollingDown ? "header-scrolling" : "header-static"}>
+        <Box sx={{}} className="header" >
             <AppBar position="static">
-                <Toolbar>
+                <Toolbar className={scrollingDown ? "header-scrolling" : "header-static"}>
                     <IconButton disableRipple
                         size="large"
                         edge="start"
@@ -334,7 +334,7 @@ export default function Header() {
                 </Toolbar>
                 {
                     showProducts &&
-                    <Card className='header-card' >
+                    <Card className='header-card border' >
                         <Card.Title className='text-center header-card-title'>Categories</Card.Title>
                         <Card.Body className='row'>
                             <div className="col-md-4 header-card-body">
@@ -373,7 +373,7 @@ export default function Header() {
 
                             </div>
                             <div className="col-md-4 header-card-body">
-                                <img width="75%" height="100%" className='header-card-body-img' src={require('../assets/images/product2.jpg')} alt="" />
+                                <img width="100%" height="100%" className='header-card-body-img' src={require('../assets/images/product2.jpg')} alt="" />
                             </div>
                         </Card.Body>
                     </Card>
