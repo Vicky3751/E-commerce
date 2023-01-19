@@ -55,7 +55,7 @@ const Products = () => {
             <div className="products-box container">
                 <div className="row products-box-row justify-content-center align-items center">
                     <div className="col-md-2 m-0 p-0">
-                        <Accordion className='filter-accordian'>
+                        <Accordion className='filter-accordian my-3'>
                             <Accordion.Item eventKey="0">
                                 <Accordion.Header>Filter</Accordion.Header>
                                 <Accordion.Body>
@@ -116,7 +116,7 @@ const Products = () => {
                                             Customer Reviews
                                         </div>
                                         <div className="colors">
-                                            <div className='customer-review-box m-2 d-flex justify-content-start align-items-center'>
+                                            <div className='customer-review-box m-2 filter-customer-box d-flex justify-content-start align-items-center'>
                                                 <img src={require('../../../../assets/images/star.jpg')} style={{ borderRadius: '50%', marginRight: 5 }} alt="" />
                                                 <img src={require('../../../../assets/images/star.jpg')} style={{ borderRadius: '50%', marginRight: 5 }} alt="" />
                                                 <img src={require('../../../../assets/images/star.jpg')} style={{ borderRadius: '50%', marginRight: 5 }} alt="" />
@@ -124,7 +124,7 @@ const Products = () => {
                                                 <img src={require('../../../../assets/images/halfstar.jpg')} style={{ borderRadius: '50%', marginRight: 5 }} alt="" />
                                                 4+
                                             </div>
-                                            <div className='customer-review-box m-2 d-flex justify-content-start align-items-center'>
+                                            <div className='customer-review-box m-2 filter-customer-box d-flex justify-content-start align-items-center'>
                                                 <img src={require('../../../../assets/images/star.jpg')} style={{ borderRadius: '50%', marginRight: 5 }} alt="" />
                                                 <img src={require('../../../../assets/images/star.jpg')} style={{ borderRadius: '50%', marginRight: 5 }} alt="" />
                                                 <img src={require('../../../../assets/images/star.jpg')} style={{ borderRadius: '50%', marginRight: 5 }} alt="" />
@@ -132,7 +132,7 @@ const Products = () => {
                                                 <img src={require('../../../../assets/images/emptystar.jpg')} style={{ borderRadius: '50%', marginRight: 5 }} alt="" />
                                                 4
                                             </div>
-                                            <div className='customer-review-box m-2 d-flex justify-content-start align-items-center'>
+                                            <div className='customer-review-box m-2 filter-customer-box d-flex justify-content-start align-items-center'>
                                                 <img src={require('../../../../assets/images/star.jpg')} style={{ borderRadius: '50%', marginRight: 5 }} alt="" />
                                                 <img src={require('../../../../assets/images/star.jpg')} style={{ borderRadius: '50%', marginRight: 5 }} alt="" />
                                                 <img src={require('../../../../assets/images/star.jpg')} style={{ borderRadius: '50%', marginRight: 5 }} alt="" />
@@ -140,7 +140,7 @@ const Products = () => {
                                                 <img src={require('../../../../assets/images/emptystar.jpg')} style={{ borderRadius: '50%', marginRight: 5 }} alt="" />
                                                 3
                                             </div>
-                                            <div className='customer-review-box m-2 d-flex justify-content-start align-items-center'>
+                                            <div className='customer-review-box m-2 filter-customer-box d-flex justify-content-start align-items-center'>
                                                 <img src={require('../../../../assets/images/star.jpg')} style={{ borderRadius: '50%', marginRight: 5 }} alt="" />
                                                 <img src={require('../../../../assets/images/star.jpg')} style={{ borderRadius: '50%', marginRight: 5 }} alt="" />
                                                 <img src={require('../../../../assets/images/emptystar.jpg')} style={{ borderRadius: '50%', marginRight: 5 }} alt="" />
@@ -148,7 +148,7 @@ const Products = () => {
                                                 <img src={require('../../../../assets/images/emptystar.jpg')} style={{ borderRadius: '50%', marginRight: 5 }} alt="" />
                                                 2
                                             </div>
-                                            <div className='customer-review-box m-2 d-flex justify-content-start align-items-center'>
+                                            <div className='customer-review-box m-2 filter-customer-box d-flex justify-content-start align-items-center'>
                                                 <img src={require('../../../../assets/images/star.jpg')} style={{ borderRadius: '50%', marginRight: 5 }} alt="" />
                                                 <img src={require('../../../../assets/images/emptystar.jpg')} style={{ borderRadius: '50%', marginRight: 5 }} alt="" />
                                                 <img src={require('../../../../assets/images/emptystar.jpg')} style={{ borderRadius: '50%', marginRight: 5 }} alt="" />
@@ -179,13 +179,15 @@ const Products = () => {
                     </div> */}
 
                     <div className="col-md-10 row justify-content-center align-items-start align-content-start">
-                        <div className="col-md-12 d-flex justify-content-between  align-items-center  filter-sort-text text-end my-4">
-                            <div className='d-flex justify-content-center align-items-center'>
+                        <div className="col-md-12 d-flex justify-content-between  align-items-center  filter-sort-text text-end my-4" style={{flexWrap : 'wrap'}}>
+                            <div className='d-flex justify-content-center align-items-center' style={{flexWrap : 'wrap'}}>
                                 <div className='mx-3'>
                                     Selected Filter :
                                 </div>
                                 <Stack direction="row" spacing={1}>
                                     <Chip label="Deletable" value="Deletable" onDelete={(e) => console.log(e, "Deletable")} />
+                                    <Chip label="Dee" value="Dee" onDelete={(e) => console.log(e.value)} />
+                                    <Chip label="Dee" value="Dee" onDelete={(e) => console.log(e.value)} />
                                     <Chip label="Dee" value="Dee" onDelete={(e) => console.log(e.value)} />
                                 </Stack>
                             </div>

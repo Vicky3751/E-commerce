@@ -8,6 +8,7 @@ import Profile from './Profile/Profile'
 import ProductRoutes from './Product/ProductRoutes'
 import AboutUs from './Others/AboutUs'
 import ContactUs from './Others/ContactUs'
+import Article from './Articles/Article'
 const MainRoutes = () => {
   return (
     <>
@@ -15,6 +16,7 @@ const MainRoutes = () => {
       <Routes>
         <Route path="/*" element={<Home />} />
         <Route path="/articles/*" element={<Articles />} />
+        <Route path="/article/*" element={<Article />} />
         <Route path="/profile/*" element={<Profile />} />
         <Route path="/products/*" element={<ProductRoutes />} />
         <Route path="/about/*" element={<AboutUs />} />
