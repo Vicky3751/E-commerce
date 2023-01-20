@@ -140,7 +140,8 @@ a:focus {
     padding-block: 15px !important;
     cursor: pointer !important;
 }
-.header-card-body-text:hover{
+
+.header-card-body-text:hover {
     transform: scale(1.1);
 }
 
@@ -269,4 +270,26 @@ input:focus-visible {
 
 .filter-customer-box {
     max-width: 100% !important;
+}
+
+.about-us-text {
+    position: absolute;
+    width: 1250px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 96px;
+    line-height: 96px;
+    letter-spacing: -1px;
+    color: #FFFFFF;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 50px !important;
+    border-radius: 25px;
+}
+
+.about-us-two-image-section{
+    max-width: 90% !important;
+    max-height: 50vh !important;
 }
