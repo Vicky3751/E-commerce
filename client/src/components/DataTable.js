@@ -19,8 +19,13 @@ const DataTable = (props) => {
         { name: "Bob Herm", company: "Test Corp", city: "Tampa", state: "FL" },
         { name: "James Houston", company: "Test Corp", city: "Dallas", state: "TX" },
     ];
-
-    const columns = props.columns ? props.columns : [
+    const final_columns = props.columns ? props.columns.map(v => ({
+        ...v, label: v.name, options: {
+            filter: true,
+            sort: true,
+        }
+    })) : []
+    const columns = props.columns ? final_columns : [
         {
             name: "name",
             label: "Name",
@@ -59,7 +64,7 @@ const DataTable = (props) => {
     return (
         <div style={{ height: '100%', display: 'table', tableLayout: 'fixed', width: '100%' }} className="muidatatable" >
             <MUIDataTable
-                title={"Employee List"}
+                title={props.title ? props.title : ""}
                 data={data}
                 columns={columns}
                 options={options}

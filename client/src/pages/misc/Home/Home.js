@@ -3,7 +3,7 @@ import "../../../assets/styles/Home.css"
 import Carousel from 'react-bootstrap/Carousel';
 import { useDispatch } from "react-redux";
 import { setIsLoading } from '../../../store/actions';
-import { TextField } from '@mui/material';
+import {  TextField } from '@mui/material';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import HorizontalScroll from "react-scroll-horizontal";

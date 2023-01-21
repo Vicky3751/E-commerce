@@ -9,6 +9,7 @@ import ProductRoutes from './Product/ProductRoutes'
 import AboutUs from './Others/AboutUs'
 import ContactUs from './Others/ContactUs'
 import Article from './Articles/Article'
+import Cart from './Cart/Cart'
 const MainRoutes = () => {
   return (
     <>
@@ -21,6 +22,7 @@ const MainRoutes = () => {
         <Route path="/products/*" element={<ProductRoutes />} />
         <Route path="/about/*" element={<AboutUs />} />
         <Route path="/contact/*" element={<ContactUs />} />
+        <Route path="/cart/*" element={<Cart />} />
       </Routes>
       <Footer />
     </>

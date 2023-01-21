@@ -12,8 +12,8 @@ import SearchIcon from '@mui/icons-material/Search';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
-import { Article, ExpandLess, ExpandMore, Home, Info, LocalMall, Phone, Storefront } from '@mui/icons-material';
-import { Typography } from '@mui/material';
+import { Add, Article, Close, ExpandLess, ExpandMore, Home, Info, LocalMall, Phone, Remove, Storefront } from '@mui/icons-material';
+import { Drawer, TextField, Typography } from '@mui/material';
 import Card from 'react-bootstrap/Card';
 
 const Search = styled('div')(({ theme }) => ({
@@ -62,6 +62,27 @@ export default function Header() {
     const [y, setY] = React.useState(window.scrollY);
     const [scrollingDown, setScrollingDown] = React.useState(false)
     const [showProducts, setShowProducts] = React.useState(false)
+
+    //drawer cart menu
+    const [cartDrawer, setCartDrawer] = React.useState(false)
+    const handleCartClick = () => {
+        setCartDrawer(true)
+    }
+
+    //quantity 
+    const [quantity, setQuantity] = React.useState(1)
+
+    const quantityIncrement = () => {
+        setQuantity(quantity + 1)
+    }
+    const quantityDecrement = () => {
+        setQuantity(quantity - 1)
+    }
+
+    const quantityChange = (e) => {
+        // console.log(e.target.value)
+        setQuantity(parseInt(e.target.value))
+    }
 
 
 
@@ -293,7 +314,7 @@ export default function Header() {
                                 />
                             }
                         </Search>
-                        <IconButton size="large" aria-label="show 4 new mails" color="inherit">
+                        <IconButton size="large" aria-label="show 4 new mails" color="inherit" onClick={handleCartClick} >
                             <Badge badgeContent={4} color="error">
                                 <LocalMall />
                             </Badge>
@@ -381,6 +402,92 @@ export default function Header() {
             </AppBar>
             {renderMobileMenu}
             {renderMenu}
+            <Drawer
+                anchor="right"
+                open={cartDrawer}
+                onClose={() => setCartDrawer(false)}
+            >
+                <div className='cart-drawer-menu'>
+                    <div className="d-flex justify-content-between py-2">
+                        <div className='new-arrival-box-text m-0'>
+                            Cart
+                        </div>
+                        <IconButton onClick={() => setCartDrawer(false)}>
+                            <Close />
+                        </IconButton>
+                    </div>
+                    <div className="cart-drawer-items my-3">
+                        {
+                            [1, 2, 3, 4, 5, 6, 7, 8, 9, 0].map((item) => (
+                                <div className="cart-drawer-item-box row">
+                                    <div className='col-md-3'>
+                                        <img width={100} height={100} src={require('../assets/images/product.jpg')} alt="" />
+                                    </div>
+                                    <div className="col-md-7">
+                                        <div className="blog-type-text">
+                                            Fashion
+                                        </div>
+                                        <div className="text-muted">
+                                            Size : XL, Color : Green
+                                        </div>
+                                        <div className="quantity d-flex  justify-content-around align-items-center">
+                                            <div className="minus-plus-box">
+                                                <IconButton className="btn" onClick={quantityDecrement} >
+                                                    <Remove />
+                                                </IconButton>
+                                            </div>
+                                            <div className="quantitiy-input">
+                                                <input type="number" min={0} value={quantity} onChange={(e) => quantityChange(e)} />
+                                            </div>
+                                            <div className="minus-plus-box">
+                                                <button className="btn" onClick={quantityIncrement}>
+                                                    <Add />
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-md-2 d-flex align-items-end">
+                                        <i class="bi bi-trash3"></i>
+                                    </div>
+                                    <div className="divider my-4"></div>
+                                </div>
+                            ))
+                        }
+
+                    </div>
+                    <div className="drawer-menu-footer">
+                        <TextField id="outlined-basic" label="Outlined" variant="outlined" />
+                        <Card className='my-2 p-2'>
+                            <div className="subtotal d-flex justify-content-between px-3 py-2">
+                                <div className="subtotal-text">
+                                    Subtotal
+                                </div>
+                                <div className="subtotal-ammount">
+                                    $160.00
+                                </div>
+                            </div>
+                            <div className="divider">
+
+                            </div>
+                            <div className="total d-flex justify-content-between px-3 py-2">
+                                <div className="total-text">
+                                    Total
+                                </div>
+                                <div className="total-ammount">
+                                    $160.00
+                                </div>
+                            </div>
+                            <button className="btn btn-primary mx-3 my-2">
+                                Checkout
+                            </button>
+                            <div className="view-cart text-center my-3">
+                                <a href="/" alt="">View cart</a>
+                            </div>
+                        </Card>
+                    </div>
+                </div>
+
+            </Drawer>
         </Box>
     );
 }
