@@ -15,6 +15,7 @@ import MoreIcon from '@mui/icons-material/MoreVert';
 import { Add, Article, Close, ExpandLess, ExpandMore, Home, Info, LocalMall, Phone, Remove, Storefront } from '@mui/icons-material';
 import { Drawer, TextField, Typography } from '@mui/material';
 import Card from 'react-bootstrap/Card';
+import { Link } from 'react-router-dom';
 
 const Search = styled('div')(({ theme }) => ({
     position: 'relative',
@@ -270,13 +271,17 @@ export default function Header() {
                         aria-label="open drawer"
                         sx={{ mr: 2 }}
                     >
-                        <img width={114} height={25} src={require("../assets/images/logo.png")} alt="" />
+                        <Link to="/">
+                            <img width={114} height={25} src={require("../assets/images/logo.png")} alt="" />
+                        </Link>
                     </IconButton>
 
                     <Box sx={{ flexGrow: 1, display: 'flex', justifyContent: 'center' }} >
                         <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
                             <MenuItem disableRipple >
-                                <Typography textAlign="center">Home</Typography>
+                                <Link to="/">
+                                    <Typography textAlign="center">Home</Typography>
+                                </Link>
                             </MenuItem>
                             <MenuItem disableRipple onClick={() => { setShowProducts(!showProducts); setScrollingDown(true) }}>
                                 <Typography textAlign="center">Products</Typography>
@@ -289,13 +294,19 @@ export default function Header() {
                                 }
                             </MenuItem>
                             <MenuItem disableRipple >
-                                <Typography textAlign="center">Articles</Typography>
+                                <Link to="/articles">
+                                    <Typography textAlign="center">Articles</Typography>
+                                </Link>
                             </MenuItem>
                             <MenuItem disableRipple >
-                                <Typography textAlign="center">About Us</Typography>
+                                <Link to="/about">
+                                    <Typography textAlign="center">About Us</Typography>
+                                </Link>
                             </MenuItem>
                             <MenuItem disableRipple >
-                                <Typography textAlign="center">Contact Us</Typography>
+                                <Link to="/contact">
+                                    <Typography textAlign="center">Contact Us</Typography>
+                                </Link>
                             </MenuItem>
                         </Box>
                     </Box>
@@ -337,7 +348,9 @@ export default function Header() {
                             onClick={handleProfileMenuOpen}
                             color="inherit"
                         >
-                            <AccountCircle />
+                            <Link to="/profile">
+                                <AccountCircle />
+                            </Link>
                         </IconButton>
                     </Box>
                     <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
@@ -356,12 +369,16 @@ export default function Header() {
                 {
                     showProducts &&
                     <Card className='header-card border' >
-                        <Card.Title className='text-center header-card-title'>Categories</Card.Title>
+                        <Card.Title className='text-center header-card-title'>
+                            <Link to="/products/categories">
+                                All Categories
+                            </Link>
+                        </Card.Title>
                         <Card.Body className='row'>
                             <div className="col-md-4 header-card-body">
-                                <div className='header-card-body-text'>
+                                <Link to="/products" className='header-card-body-text'>
                                     Electronics
-                                </div>
+                                </Link>
                                 <div className='header-card-body-text'>
                                     Shoes
                                 </div>
@@ -477,12 +494,14 @@ export default function Header() {
                                     $160.00
                                 </div>
                             </div>
-                            <button className="btn btn-primary mx-3 my-2">
-                                Checkout
-                            </button>
-                            <div className="view-cart text-center my-3">
-                                <a href="/" alt="">View cart</a>
-                            </div>
+                            <Link to="/cart" className='width-100' onClick={() => setCartDrawer(false)}>
+                                <button className="btn btn-primary width-100">
+                                    Checkout
+                                </button>
+                            </Link>
+                            <Link to="/cart" onClick={() => setCartDrawer(false)} className="view-cart text-center my-3">
+                                <span>View cart</span>
+                            </Link>
                         </Card>
                     </div>
                 </div>

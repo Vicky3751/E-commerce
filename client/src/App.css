@@ -342,19 +342,20 @@ input:focus-visible {
     color: #121212;
 }
 
-.cart-drawer-item-box svg{
+.cart-drawer-item-box svg {
     font-size: 16px !important;
 }
 
-.cart-drawer-item-box .minus-plus-box button{
+.cart-drawer-item-box .minus-plus-box button {
     padding-inline: 0px !important;
 }
-.cart-drawer-item-box .quantitiy-input input{
+
+.cart-drawer-item-box .quantitiy-input input {
     max-width: 50px !important;
     font-size: 14px !important;
 }
 
-.cart-drawer-item-box .quantity{
+.cart-drawer-item-box .quantity {
     max-width: 125px;
     margin-top: 8px !important;
 }
@@ -362,16 +363,43 @@ input:focus-visible {
 th button {
     margin: auto !important;
 }
-td *{
+
+td * {
     text-align: center !important;
 }
 
 
-.cart-coupon-text{
+.cart-coupon-text {
     font-size: 24px !important;
     font-weight: medium;
 }
-.cart-coupon-subtext{
+
+.cart-coupon-subtext {
     font-size: 18px;
     opacity: 75%;
+}
+
+a {
+    color: #000 !important;
+    text-decoration: none !important;
+}
+
+a:visited {
+    text-decoration: none !important;
+    color: #000 !important;
+}
+
+a:hover {
+    text-decoration: none !important;
+    color: #000 !important;
+}
+
+
+
+/* media query  */
+
+@media (max-width : 600px) {
+    .no-mobile {
+        display: none !important;
+    }
 }

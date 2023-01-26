@@ -7,6 +7,7 @@ import {  TextField } from '@mui/material';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import HorizontalScroll from "react-scroll-horizontal";
+import { Link } from 'react-router-dom';
 const Home = () => {
   const dispatch = useDispatch();
   useEffect(() => {
@@ -33,7 +34,7 @@ const Home = () => {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src={require("../../../assets/images/product1.jpg")}
+              src={require("../../../assets/images/product2.jpg")}
               alt="Second slide"
             />
 
@@ -45,7 +46,7 @@ const Home = () => {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src={require("../../../assets/images/product2.jpg")}
+              src={require("../../../assets/images/product3.jpg")}
               alt="Third slide"
             />
             {/* <Carousel.Caption>
@@ -241,7 +242,7 @@ const Home = () => {
                   Nike Shoes
                 </div>
               </div>
-              <div className="col-md-3 my-3">
+              <div className="col-md-3 my-3 no-mobile">
                 <div className="new-arrival-car-img">
                   <img src={require("../../../assets/images/product.jpg")} alt="" />
                 </div>
@@ -249,7 +250,7 @@ const Home = () => {
                   Nike Shoes
                 </div>
               </div>
-              <div className="col-md-3 my-3">
+              <div className="col-md-3 my-3 no-mobile">
                 <div className="new-arrival-car-img">
                   <img src={require("../../../assets/images/product.jpg")} alt="" />
                 </div>
@@ -257,7 +258,7 @@ const Home = () => {
                   Nike Shoes
                 </div>
               </div>
-              <div className="col-md-3 my-3">
+              <div className="col-md-3 my-3 no-mobile">
                 <div className="new-arrival-car-img">
                   <img src={require("../../../assets/images/product.jpg")} alt="" />
                 </div>
@@ -265,7 +266,7 @@ const Home = () => {
                   Nike Shoes
                 </div>
               </div>
-              <div className="col-md-3 my-3">
+              <div className="col-md-3 my-3 no-mobile">
                 <div className="new-arrival-car-img">
                   <img src={require("../../../assets/images/product.jpg")} alt="" />
                 </div>
@@ -273,9 +274,9 @@ const Home = () => {
                   Nike Shoes
                 </div>
               </div>
-              <div className="tab-nav-btn-box d-flex justify-content-center align-items-center my-3">
+              <Link to="/products" className="tab-nav-btn-box d-flex justify-content-center align-items-center my-3">
                 <button className="btn btn-primary">Load More</button>
-              </div>
+              </Link>
             </div>
           </Tab>
           <Tab eventKey="new_arrivals" title="New Arrivals">
@@ -312,7 +313,7 @@ const Home = () => {
                   Nike Shoes
                 </div>
               </div>
-              <div className="col-md-3 my-3">
+              <div className="col-md-3 my-3 no-mobile">
                 <div className="new-arrival-car-img">
                   <img src={require("../../../assets/images/product2.jpg")} alt="" />
                 </div>
@@ -320,7 +321,7 @@ const Home = () => {
                   Nike Shoes
                 </div>
               </div>
-              <div className="col-md-3 my-3">
+              <div className="col-md-3 my-3 no-mobile">
                 <div className="new-arrival-car-img">
                   <img src={require("../../../assets/images/product2.jpg")} alt="" />
                 </div>
@@ -328,7 +329,7 @@ const Home = () => {
                   Nike Shoes
                 </div>
               </div>
-              <div className="col-md-3 my-3">
+              <div className="col-md-3 my-3 no-mobile">
                 <div className="new-arrival-car-img">
                   <img src={require("../../../assets/images/product2.jpg")} alt="" />
                 </div>
@@ -336,7 +337,7 @@ const Home = () => {
                   Nike Shoes
                 </div>
               </div>
-              <div className="col-md-3 my-3">
+              <div className="col-md-3 my-3 no-mobile">
                 <div className="new-arrival-car-img">
                   <img src={require("../../../assets/images/product2.jpg")} alt="" />
                 </div>
@@ -344,9 +345,9 @@ const Home = () => {
                   Nike Shoes
                 </div>
               </div>
-              <div className="tab-nav-btn-box d-flex justify-content-center align-items-center my-3">
+              <Link to="/products" className="tab-nav-btn-box d-flex justify-content-center align-items-center my-3">
                 <button className="btn btn-primary">Load More</button>
-              </div>
+              </Link>
             </div>
           </Tab>
           <Tab eventKey="sale" title="Sale">
@@ -383,7 +384,7 @@ const Home = () => {
                   Nike Shoes
                 </div>
               </div>
-              <div className="col-md-3 my-3">
+              <div className="col-md-3 my-3 no-mobile">
                 <div className="new-arrival-car-img">
                   <img src={require("../../../assets/images/product3.jpg")} alt="" />
                 </div>
@@ -391,7 +392,7 @@ const Home = () => {
                   Nike Shoes
                 </div>
               </div>
-              <div className="col-md-3 my-3">
+              <div className="col-md-3 my-3 no-mobile">
                 <div className="new-arrival-car-img">
                   <img src={require("../../../assets/images/product3.jpg")} alt="" />
                 </div>
@@ -399,7 +400,7 @@ const Home = () => {
                   Nike Shoes
                 </div>
               </div>
-              <div className="col-md-3 my-3">
+              <div className="col-md-3 my-3 no-mobile">
                 <div className="new-arrival-car-img">
                   <img src={require("../../../assets/images/product3.jpg")} alt="" />
                 </div>
@@ -407,7 +408,7 @@ const Home = () => {
                   Nike Shoes
                 </div>
               </div>
-              <div className="col-md-3 my-3">
+              <div className="col-md-3 my-3 no-mobile">
                 <div className="new-arrival-car-img">
                   <img src={require("../../../assets/images/product3.jpg")} alt="" />
                 </div>
@@ -415,9 +416,9 @@ const Home = () => {
                   Nike Shoes
                 </div>
               </div>
-              <div className="tab-nav-btn-box d-flex justify-content-center align-items-center my-3">
+              <Link to="/products" className="tab-nav-btn-box d-flex justify-content-center align-items-center my-3">
                 <button className="btn btn-primary">Load More</button>
-              </div>
+              </Link>
             </div>
           </Tab>
         </Tabs>
@@ -488,7 +489,7 @@ const Home = () => {
             <div className='newsletter-box-text'>
               Keep Me Updated About BIG Discounts
             </div>
-            <TextField autoFocus={true} className='col-md-12 text-field' id="standard-basic" label="Email" variant="standard" InputProps={{ disableUnderline: true }} sx={{
+            <TextField  className='col-md-12 text-field' id="standard-basic" label="Email" variant="standard" InputProps={{ disableUnderline: true }} sx={{
               input: { color: '#000' }, "& .MuiInputLabel-root": { color: '#000' }, "& .MuiOutlinedInput-root": {
                 "& > fieldset": { borderColor: "orange" },
               },

@@ -5,6 +5,7 @@ import Accordion from 'react-bootstrap/Accordion';
 import Dropdown from 'react-bootstrap/Dropdown';
 import Chip from '@mui/material/Chip';
 import Stack from '@mui/material/Stack';
+import { Link } from 'react-router-dom';
 const Products = () => {
     return (
         <>
@@ -206,7 +207,7 @@ const Products = () => {
                             </Dropdown>
                         </div>
                         <div className="row align-items-start">
-                            <div className="row col-md-3 my-3 product-single justify-content-center">
+                            <Link to="/products/item/1234" className="row col-md-3 my-3 product-single justify-content-center">
                                 <div className="products-image-box">
                                     <img src={require("../../../../assets/images/product.jpg")} alt="" />
                                 </div>
@@ -227,7 +228,7 @@ const Products = () => {
                                         $500.00
                                     </span>
                                 </div>
-                            </div>
+                            </Link>
                             <div className="row col-md-3 my-3 product-single justify-content-center">
                                 <div className="products-image-box">
                                     <img src={require("../../../../assets/images/product.jpg")} alt="" />
