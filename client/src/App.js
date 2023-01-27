@@ -6,6 +6,7 @@ import AdminRoute from './pages/admin/AdminRoute';
 import MainRoutes from './pages/misc/MainRoutes';
 import { useSelector } from 'react-redux';
 import { Spinner } from 'react-bootstrap';
+import ScrollToTop from './middleware/Scroll-to-tp/ScrollToTop';
 
 function App() {
   const isLoading = useSelector((state) => state.spinner.isLoading)
@@ -17,11 +18,12 @@ function App() {
       :
       <Router>
         {isLoading}
-        <Routes>
-          <Route path="/*" exact={true} element={<AuthGuard isLoggedIn={true}><MainRoutes /></AuthGuard>} />
-          <Route path="/auth/*" element={<AuthRoute />} />
-          <Route path="/admin/*" element={<AuthGuard isLoggedIn={true}><AdminRoute /></AuthGuard>} />
-        </Routes>
+        <ScrollToTop/>
+          <Routes>
+            <Route path="/*" exact={true} element={<AuthGuard isLoggedIn={true}><MainRoutes /></AuthGuard>} />
+            <Route path="/auth/*" element={<AuthRoute />} />
+            <Route path="/admin/*" element={<AuthGuard isLoggedIn={true}><AdminRoute /></AuthGuard>} />
+          </Routes>
       </Router>
   );
 }

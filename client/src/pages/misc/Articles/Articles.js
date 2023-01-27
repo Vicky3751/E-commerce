@@ -1,6 +1,7 @@
 import { TextField } from '@mui/material'
 import React from 'react'
 import { Card } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
 const Articles = () => {
   return (
@@ -28,7 +29,7 @@ const Articles = () => {
         </div>
         <div className="row justify-content-start align-items-start my-5 py-5">
           <div className="col-md-3 my-3 px-5">
-            <Card className='blog-card'>
+            <Link to="/article/1234" className='blog-card'>
               <Card.Img variant="top" width="100%" height="250px" src={require('../../../assets/images/product.jpg')} />
               <Card.Body>
                 <Card.Subtitle className="mb-2 text-muted">13 Oct 2022</Card.Subtitle>
@@ -36,7 +37,7 @@ const Articles = () => {
                   3 Instagram-Inspired Interior Design Trends to Buy, Like, Immediately
                 </Card.Text>
               </Card.Body>
-            </Card>
+            </Link>
           </div>
           <div className="col-md-3 my-3 px-5">
             <Card className='blog-card'>

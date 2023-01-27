@@ -372,10 +372,10 @@ export default function Header() {
                     showProducts &&
                     <Card>
                         <div className='d-flex justify-content-center align-items-center'>
-                            <div className='header-options d-flex justify-content-center align-items-center'>
+                            <Link to="/products/categories" className='header-options d-flex justify-content-center align-items-center'>
                                 <img width={30} style={{ marginInline: 10 }} src={require('../assets/images/electronic.png')} alt="" />
                                 Electronics
-                            </div>
+                            </Link>
                             <div className='header-options d-flex justify-content-center align-items-center'>
                                 <img width={30} style={{ marginInline: 10 }} src={require('../assets/images/appliance.png')} alt="" />
                                 Appliances
