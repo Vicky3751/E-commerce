@@ -12,7 +12,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
-import { Add, Article, Close, ExpandLess, ExpandMore, Home, Info, LocalMall, Phone, Remove, Storefront } from '@mui/icons-material';
+import { Add, Article, ChevronRight, Close, ExpandLess, ExpandMore, Home, Info, LocalMall, Phone, Remove, Storefront } from '@mui/icons-material';
 import { Drawer, TextField, Typography } from '@mui/material';
 import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
@@ -91,9 +91,11 @@ export default function Header() {
         e => {
             const window = e.currentTarget;
             if (y > window.scrollY) {
+                setShowProducts(false)
                 // console.log("scrolling up");
             } else if (y < window.scrollY) {
                 // console.log("scrolling down");
+                setShowProducts(false)
                 setScrollingDown(true)
             }
             if (window.scrollY === 0) {
@@ -368,52 +370,36 @@ export default function Header() {
                 </Toolbar>
                 {
                     showProducts &&
-                    <Card className='header-card border' >
-                        <Card.Title className='text-center header-card-title'>
-                            <Link to="/products/categories">
-                                All Categories
-                            </Link>
-                        </Card.Title>
-                        <Card.Body className='row'>
-                            <div className="col-md-4 header-card-body">
-                                <Link to="/products" className='header-card-body-text'>
-                                    Electronics
-                                </Link>
-                                <div className='header-card-body-text'>
-                                    Shoes
-                                </div>
-                                <div className='header-card-body-text'>
-                                    Clothes
-                                </div>
-                                <div className='header-card-body-text'>
-                                    Bags
-                                </div>
-                                <div className='header-card-body-text'>
-                                    Appliances
-                                </div>
+                    <Card>
+                        <div className='d-flex justify-content-center align-items-center'>
+                            <div className='header-options d-flex justify-content-center align-items-center'>
+                                <img width={30} style={{ marginInline: 10 }} src={require('../assets/images/electronic.png')} alt="" />
+                                Electronics
                             </div>
-                            <div className="col-md-4 header-card-body">
-                                <div className='header-card-body-text'>
-                                    Electronics
-                                </div>
-                                <div className='header-card-body-text'>
-                                    Shoes
-                                </div>
-                                <div className='header-card-body-text'>
-                                    Clothes
-                                </div>
-                                <div className='header-card-body-text'>
-                                    Bags
-                                </div>
-                                <div className='header-card-body-text'>
-                                    Appliances
-                                </div>
-
+                            <div className='header-options d-flex justify-content-center align-items-center'>
+                                <img width={30} style={{ marginInline: 10 }} src={require('../assets/images/appliance.png')} alt="" />
+                                Appliances
                             </div>
-                            <div className="col-md-4 header-card-body">
-                                <img width="100%" height="100%" className='header-card-body-img' src={require('../assets/images/product2.jpg')} alt="" />
+                            <div className='header-options d-flex justify-content-center align-items-center'>
+                                <img width={30} style={{ marginInline: 10 }} src={require('../assets/images/male-clothes.png')} alt="" />
+                                Men
                             </div>
-                        </Card.Body>
+                            <div className='header-options d-flex justify-content-center align-items-center'>
+                                <img width={30} style={{ marginInline: 10 }} src={require('../assets/images/woman-clothes.png')} alt="" />
+                                Women
+                            </div>
+                            <div className='header-options d-flex justify-content-center align-items-center'>
+                                <img width={30} style={{ marginInline: 10 }} src={require('../assets/images/baby-clothes.png')} alt="" />
+                                Baby & Kids
+                            </div>
+                            <div className='header-options d-flex justify-content-center align-items-center'>
+                                <img width={30} style={{ marginInline: 10 }} src={require('../assets/images/book.png')} alt="" />
+                                Sports,Books and More
+                            </div>
+                            <div className='header-options d-flex justify-content-center align-items-center'>
+                                View All <ChevronRight />
+                            </div>
+                        </div>
                     </Card>
                 }
             </AppBar>
